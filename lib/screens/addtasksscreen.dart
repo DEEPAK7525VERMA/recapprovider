@@ -5,30 +5,34 @@ class AddTask extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child:Column(children: [
-        Text("Add Tasks",
-        style:TextStyle(
-          fontWeight: FontWeight.w400,
-          fontSize: 30,
-          color:Colors.lightBlueAccent,
-        ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: TextField(
+      child:Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+          Text("Add Tasks",
+          textAlign:TextAlign.center,
+          style:TextStyle(
+            fontWeight: FontWeight.w400,
+            fontSize: 30,
+            color:Colors.lightBlueAccent,
+          ),
+          ),
+          TextField(
             autofocus: true,
           ),
-        ),
-        TextButton(onPressed:(){},
-        style: TextButton.styleFrom(backgroundColor: Colors.lightBlueAccent),
-        child:Text("Add",
-        style:TextStyle(
-          fontWeight: FontWeight.w300,
-          fontSize: 30,
-          color:Colors.white,
-        ),))
-
-      ],)
+          SizedBox(height:10),
+          TextButton(onPressed:(){},
+          style: TextButton.styleFrom(backgroundColor: Colors.lightBlueAccent),
+          child:Text("Add",
+          style:TextStyle(
+            fontWeight: FontWeight.w300,
+            fontSize: 30,
+            color:Colors.white,
+          ),))
+        
+        ],),
+      )
     );
   }
 }
